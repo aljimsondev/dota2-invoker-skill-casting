@@ -4,10 +4,50 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Invocation</title>
+    <title>Spritesheet Generator</title>
+    <link rel="stylesheet" type="text/css" href="/src/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/fontawesome-free-5.13.0-web/css/all.min.css"
+    />
+    <script src="/fontawesome-free-5.13.0-web/js/all.min.js"></script>
+    <script defer type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <div id="root">
+      <div class="navbar">
+        <div class="nav-title">
+          <h4>Spritesheet <em>Maker</em></h4>
+        </div>
+        <div class="flex-grow">
+          <div class="form-control">
+            <form class="form">
+              <div class="form-inline">
+                <input id="upload" type="file" multiple accept="images/png" />
+                <label class="label" for="upload"
+                  ><span class="span"><i class="fas fa-image"></i></span>Select
+                  Files</label
+                >
+                <a id="download" download="spritesheet.png" class="download">
+                  <span class="span"><i class="fas fa-save"></i></span
+                  >Spritesheet</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="canvas-wrapper" class="canvas-wrapper"></div>
+      <div class="fab-custom-wrapper">
+        <div class="modal">
+          <ul>
+            <li>How to use?</li>
+            <li>About</li>
+          </ul>
+        </div>
+        <button class="fab-custom"><i class="fas fa-question"></i></button>
+      </div>
+    </div>
   </body>
 </html>
